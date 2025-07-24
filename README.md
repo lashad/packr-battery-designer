@@ -2,6 +2,9 @@
 
 Packr is a lightweight web application for designing and visualizing custom **18650 battery pack configurations** like 3S8P, 4S6P, etc. It's perfect for hobbyists, engineers, and educators who need a simple and visual layout tool for prototyping battery systems.
 
+## App
+https://packr-app-roptc.ondigitalocean.app
+
 ---
 
 ## 🔧 Features
