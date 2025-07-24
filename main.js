@@ -240,6 +240,10 @@ document.getElementById("loadFileInput").onchange = (event) => {
       }
       currentScene = loadedScene;
 
+      if (!currentScene.manager) {
+        currentScene.manager =  new GLBMeshManager(currentScene);
+      }
+
       if (!loadedScene.activeCamera) {
         loadedScene.createDefaultCamera(true);
       }
