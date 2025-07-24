@@ -1,0 +1,79 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Packr – 18650 Battery Pack Designer</title>
+  <meta
+    name="description"
+    content="Design and visualize 18650 battery packs in custom configurations like 3S8P using Packr. A lightweight tool for battery pack prototyping and layout planning."
+  />
+  <meta
+    name="keywords"
+    content="18650, battery pack, battery designer, lithium-ion, battery builder, 3S8P, pack layout, battery simulator, battery configuration, Packr"
+  />
+  <meta name="author" content="Your Name or Company" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Packr – 18650 Battery Pack Designer" />
+  <meta
+    property="og:description"
+    content="Custom-build your 18650 battery configurations with Packr. Visual. Intuitive. Fast."
+  />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:image"
+    content="https://yourdomain.com/assets/preview.jpg"
+  />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/loaders/babylon.glTF2FileLoader.min.js"></script>
+  <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+  <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="main.css" />
+  <script src="GLBMeshManager.js"></script>
+</head>
+<body>
+  <canvas id="renderCanvas"></canvas>
+
+  <div id="scene-controls" class="scene-view">
+    <h5>Create Pack (18650)</h5>
+    <input type="file" id="loadFileInput" style="display: none" />
+    <input type="number" id="inputRows" placeholder="Rows" />
+    <input type="number" id="inputCols" placeholder="Cols" />
+    <input type="text" id="inputName" placeholder="Pack Name" />
+    <button id="createCustomPack"><i class="fas fa-plus"></i> Create</button>
+    <hr />
+    <h5>File</h5>
+    <button id="loadSceneBtn"><i class="fas fa-folder-open"></i> Load</button>
+    <button id="saveSceneBtn"><i class="fas fa-save"></i> Save</button>
+    <hr />
+
+    <h5>Properties</h5>
+    <button id="hideAlpha">
+      <i class="fas fa-eye-slash"></i> Hide Un-Linked
+    </button>
+    <button id="showAlpha"><i class="fas fa-eye"></i> Show Un-Linked</button>
+  </div>
+
+  <div id="scene-view" class="scene-view">
+    <button id="frontView" title="Front View">
+      <i class="fas fa-arrow-up"></i> F
+    </button>
+    <button id="backView" title="Back View">
+      <i class="fas fa-arrow-down"></i> B
+    </button>
+    <button id="leftView" title="Left View">
+      <i class="fas fa-arrow-left"></i> L
+    </button>
+    <button id="rightView" title="Right View">
+      <i class="fas fa-arrow-right"></i> R
+    </button>
+    <button id="homeView" title="Home View (Isometric)">
+      <i class="fas fa-home"></i> Home
+    </button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
